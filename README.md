@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="your-logo.png" alt="Logo" width="80" height="80">
   <h1>Quote Generator Website</h1>
   <p>A simple quote generator website built using Node.js and Express.</p>
 </div>
