@@ -1,36 +1,48 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Quote Generator</title>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
         <h1>Quote Generator</h1>
-        <br>
-        <textarea id="quote-output" rows="5" cols="50" placeholder="Click generate to generate quote..." readonly></textarea>
-        <label for="quote-output" class="quote-output-head">Generated Quote:</label>
-        <br><br>
-        <div class="flex-container">
-        <label for="quote-type">Category</label>
-        <select id="quote-type">
-            <option value="none">None</option>
-            <option value="coding">Coding</option>
-            <option value="nature">Nature</option>
-            <option value="success">Success</option>
-            <option value="Friendship">Friendship</option>
-            <option value="inspirational">Inspirational</option>
-            <option value="funny">Funny</option>
-            <option value="technology">Technology</option>
-            <option value="motivational">Motivational</option>
-        </select>
-        <br><br>
-        <button id="generate-button">Generate</button>
-        <button id="copy-button">Copy to Clipboard</button>
-        <div class="copy-to-clipboard-alert show">
+        <div class="quote-container">
+            <label for="quote-type">Category</label>
+            <select id="quote-type">
+                <option value="none">None</option>
+                <option value="coding">Coding</option>
+                <option value="nature">Nature</option>
+                <option value="success">Success</option>
+                <option value="Friendship">Friendship</option>
+                <option value="inspirational">Inspirational</option>
+                <option value="funny">Funny</option>
+                <option value="technology">Technology</option>
+                <option value="motivational">Motivational</option>
+            </select>
+        </div>
+        <div class="quote-display">
+            <label for="quote-output" class="quote-output-head">Generated Quote:</label>
+            <textarea id="quote-output" rows="5" cols="50" placeholder="Click generate to generate quote..."
+                readonly></textarea>
+            <div class="button-container">
+                <button id="generate-button">Generate</button>
+                <button id="copy-button">Copy to Clipboard</button> 
+                <div class="popup-dialog" id="popup-dialog">
+                    <p>Copied to clipboard successfully!</p>
+                </div>
+            </div>
         </div>
     </div>
-    </body>
+    <footer class="footer">
+        <p>Made by Jay Mehta </p>
+        <p> GitHub: <a href="https://github.com/jaymehta002">jaymehta002</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/jaymehta002/">jaymehta002</a></p>
+        <p>&copy; 2023 Jay Mehta</p>
+    </footer>
     <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,122 +1,156 @@
 /* Body */
 body {
-    background-color: #ffd2b0;
-    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8; /* Light gray color */
+    font-family: 'Roboto', sans-serif; /* New font */
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 60%;
+    background: #ffffff; /* White color */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* 3D effect */
 }
 
 /* Heading */
 h1 {
-    font-size: 2rem;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 1rem;
+    color: #333333; /* Dark gray color */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for 3D effect */
 }
 
+/* Label and Select */
 label {
-    font-size: large;
-}
-
-/* Text area */
-textarea {
-    width: 70%;
-    height: 10rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    resize: none;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
-}
-
-.quote-output-head {
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-}
-
-textarea {
-    margin: 0 auto;
-    display: block;
-    border-radius: 20px;
-}
-
-/* Generate button */
-#generate-button {
-    width: 10%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-/* Copy to clipboard button */
-#copy-button {
-    width: 10%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 1.3rem;
+    color: #333333; /* Dark gray color */
+    margin-bottom: 15px;
 }
 
 #quote-type {
-    width: 10%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 15px;
+    border: none;
     border-radius: 5px;
-    background-color: #fff;
-    font-size: 1rem;
-    line-height: 1.5;
-    cursor: pointer;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(to right, #f2f2f2, #e0e0e0); /* Gradient background for 3D effect */
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif; /* New font */
+}
+
+/* Quote Display */
+.quote-display {
+    margin-top: 30px;
+}
+
+.quote-output-head {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333333; /* Dark gray color */
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: calc(100% - 40px); /* Adjusted width to fit within the container */
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    resize: none;
+    background: linear-gradient(to right, #f2f2f2, #e0e0e0); /* Gradient background for 3D effect */
+    border: 1px solid #dddddd; /* Light gray color */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* 3D effect */
+    color: #333333; /* Dark gray color */
+    font-family: 'Roboto', sans-serif; /* New font */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    width: 40%;
+    padding: 15px;
+    margin: 0 10px;
+    background-color: #333333; /* Dark gray color */
+    color: #ffffff; /* White color */
+    border: none;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2); /* 3D effect */
+    font-family: 'Roboto', sans-serif; /* New font */
+    transition: all 0.3s ease;
 }
 
-/* Flex container for buttons and dropdown */
-.flex-container {
+button:hover {
+    background-color: #555555; /* Slightly darker gray color */
+    transform: translateY(-3px); /* Add hover effect */
+}
+
+button:focus {
+    outline: none;
+}
+/* Existing CSS rules... */
+
+/* Copy to clipboard alert */
+.popup-dialog {
+    display: none;
+    position: fixed;
+    bottom: 25px; /* Adjust the position to accommodate the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #333333; /* Dark gray color */
+    color: #ffffff; /* White color */
+    border-radius: 5px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* 3D effect */
+    z-index: 2; /* Ensure the popup dialog displays above the footer */
+    font-family: 'Roboto', sans-serif; /* New font */
+}
+
+/* Footer styles */
+.footer {
     display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8; /* Light gray color */
+    color: #333333; /* Dark gray color */
+    padding: 10px 10px;
+    gap: 10px;
+    font-family: 'Arial', sans-serif; /* New font */
+    font-size: 14px; /* Adjust the font size */
+    z-index: 1; /* Ensure the footer stays at the bottom */
 }
 
-button{
-    width: 50px;
+.footer a {
+    text-decoration: none;
+    color: #29648a; /* Calming blue color */
+    margin: 0 10px; /* Adjust the margin to provide space between the links */
 }
 
-.flex-container {
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    gap: 20px;
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }
 
-.flex-container button {
-    flex: 1;
-    margin: 0 5px;
+/* Adjust the position for small screens */
+@media only screen and (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
