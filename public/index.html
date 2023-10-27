@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quote Generator</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Quote Generator</h1>
+        <br>
+        <textarea id="quote-output" rows="5" cols="50" placeholder="Click generate to generate quote..." readonly></textarea>
+        <label for="quote-output" class="quote-output-head">Generated Quote:</label>
+        <br><br>
+        <div class="flex-container">
+        <label for="quote-type">Category</label>
+        <select id="quote-type">
+            <option value="none">None</option>
+            <option value="coding">Coding</option>
+            <option value="nature">Nature</option>
+            <option value="success">Success</option>
+            <option value="Friendship">Friendship</option>
+            <option value="inspirational">Inspirational</option>
+            <option value="funny">Funny</option>
+            <option value="technology">Technology</option>
+            <option value="motivational">Motivational</option>
+        </select>
+        <br><br>
+        <button id="generate-button">Generate</button>
+        <button id="copy-button">Copy to Clipboard</button>
+        <div class="copy-to-clipboard-alert show">
+        </div>
+    </div>
+    </body>
+    <script src="script.js"></script>
+</html>

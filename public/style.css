@@ -1,0 +1,122 @@
+/* Body */
+body {
+    background-color: #ffd2b0;
+    perspective: 1000px;
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: large;
+}
+
+/* Text area */
+textarea {
+    width: 70%;
+    height: 10rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.quote-output-head {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+textarea {
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Generate button */
+#generate-button {
+    width: 10%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Copy to clipboard button */
+#copy-button {
+    width: 10%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#quote-type {
+    width: 10%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Flex container for buttons and dropdown */
+.flex-container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+button{
+    width: 50px;
+}
+
+.flex-container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.flex-container button {
+    flex: 1;
+    margin: 0 5px;
+}
+
